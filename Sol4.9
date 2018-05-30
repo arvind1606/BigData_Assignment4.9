@@ -1,0 +1,9 @@
+from scipy import stats as st
+
+mean = 1026
+std_dev = 209
+my_score = 1100
+
+z = (my_score - mean) / std_dev
+percent = st.norm.cdf(z) * 100
+print("I score {:.2f}%, which is {:.2f}% above the avarage.".format(percent,percent-50))
